@@ -20,14 +20,14 @@ public class SlaveServiceImpl implements SlaveService {
     }
 
     @Transactional
-    public void insertService(UserInfo happiness){
+    public void insertService(UserInfo userInfo){
     	
-    	if("小篱".equals(happiness.getUserName())) {
+    	if("小篱".equals(userInfo.getUserName())) {
     		slaveDao.insertHappiness(404L,"小篱", "9421");
     		//测试事务
     		int a = 1 / 0;
     		slaveDao.insertHappiness(405L,"小篱", "9422");
     	}
-    	slaveDao.insertHappiness(happiness.getId(), happiness.getUserName(), happiness.getPassword());
+    	slaveDao.insertHappiness(userInfo.getId(), userInfo.getUserName(), userInfo.getPassword());
     }
 }

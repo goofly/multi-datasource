@@ -21,14 +21,14 @@ public class MasterServiceImpl implements MasterService {
     }
 
     @Transactional
-    public void insertService(UserInfo happiness){
+    public void insertService(UserInfo userInfo){
     	
-    	if("小篱".equals(happiness.getUserName())) {
+    	if("小篱".equals(userInfo.getUserName())) {
     		masterDao.insertHappiness(404L,"小篱", "9421");
     		//测试事务
     		int a = 1 / 0;
     		masterDao.insertHappiness(405L,"小篱", "9422");
     	}
-    	masterDao.insertHappiness(happiness.getId(), happiness.getUserName(), happiness.getPassword());
+    	masterDao.insertHappiness(userInfo.getId(), userInfo.getUserName(), userInfo.getPassword());
     }
 }

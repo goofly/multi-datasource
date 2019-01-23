@@ -12,8 +12,7 @@
 	<groupId>com.goofly</groupId>
     <artifactId>multidb-demo</artifactId>
     <version>1.0</version>
-    <packaging>pom</packaging>
-	
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -38,4 +37,13 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+
+	<build>
+	<plugins>
+	<plugin>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-maven-plugin</artifactId>
+	</plugin>
+	</plugins>
+	</build>
 </project>
